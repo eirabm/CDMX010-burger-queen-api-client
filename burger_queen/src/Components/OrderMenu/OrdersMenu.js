@@ -4,6 +4,8 @@ import Navbar from '../Elements/Navbar/Navbar.js';
 
 export const OrderMenu=()=>{
 	return(
+
+		<Navbar />
 		<div>
 			<Navbar></Navbar>
 			<div className="menu-Option">
@@ -13,5 +15,6 @@ export const OrderMenu=()=>{
 			<button className="btn-Out">Salir</button>
 			</div>
 		</div>
+
 	)
 }

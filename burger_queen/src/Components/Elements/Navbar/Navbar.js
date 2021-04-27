@@ -9,6 +9,7 @@ import menuGral from './../../../Assets/Icon/menuGral.png'
 			<img className="navbar-iconMenuGral" src={menuGral} alt="Menu General" />
 			<img className="navbar-img" src={logoNavbar} alt="Burger Queen"/>
 			<label className="navbar-userName">User Name</label>
+
 		</div>
 	)
 }
