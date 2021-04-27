@@ -4,6 +4,7 @@ import Navbar from '../Elements/Navbar/Navbar.js';
 
 export const OrderMenu=()=>{
 	return(
-		<Navbar></Navbar>
+		<Navbar />
+		
 	)
 }

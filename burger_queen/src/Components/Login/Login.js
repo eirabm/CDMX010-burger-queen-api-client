@@ -4,6 +4,10 @@ import logoBQ from './../../Assets/Images/logoBQ.png'
 
 
 export const Login=()=>{
+	const changeView = () =>{
+		console.log('me picaste <3')
+	}
+
 	return(
 		<div className="login">
 			<div className="login-logo">
@@ -14,7 +18,7 @@ export const Login=()=>{
 				<form>
 					<input className="user" type="text" placeholder="Usuario"></input><br/>
 					<input className="password" type="password" placeholder="Contraseña"></input><br/>
-					<button>Ingresar</button>
+					<button onClick={changeView}>Ingresar</button>
 				</form>
 
 			</div>
