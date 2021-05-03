@@ -1,0 +1,84 @@
+.TakeOrder-Container{
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+}
+.Takeorder-Board-Container{
+	width: 50%;
+	min-height: 560px;
+	margin: 20px;
+}
+
+.Takeorder-board{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	background-color: #454C53;
+	border-radius: 10px;
+}
+.Takeorder-board p{
+	text-align: center;
+	font-size: 1.8em;
+	color: #ffff;
+	margin: 10px;
+}
+.user-name{
+	margin-left: auto;
+  margin-right: auto;
+	height: 30px;
+	width: 60%;
+	border-radius: 5px;
+}
+.Takeorder-board button{
+	height: 40px;
+	width: 50%;
+	margin-left: auto;
+  margin-right: auto;
+	background-color: #F3C51E;
+	border-bottom: #F3C51E ;
+	font-weight: bold;
+	font-size: 1.5em;	
+	margin-bottom: 5%;
+	
+}
+
+.TakeOrder-Menu{
+	width: 50%;
+	justify-content: space-around;
+	margin: 20px;
+}
+
+.TakeOrder-Menu button{
+background-color: transparent;
+border: transparent;
+font-size: 1.5em;
+}
+
+.items{
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.item-button{
+	box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	border: 3px solid #f3c51e;
+	width: 120px;
+	height: 40px;
+	font-size: 10px;
+	justify-content: center;
+	align-content: center; 
+}
+
+
+.order{
+	padding: 20px;
+	height: 75%;
+}
+
