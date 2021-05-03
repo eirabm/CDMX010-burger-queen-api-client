@@ -1,0 +1,15 @@
+.order-card{
+    box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+    border-radius: 10px;
+	border: 3px solid #f3c51e;
+}
+.orders-menu{
+	width: 50%;
+	justify-content: space-around;
+	margin: 20px;
+}
+.orders-menu button{
+	
+}
