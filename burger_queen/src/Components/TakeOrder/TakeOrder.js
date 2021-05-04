@@ -1,7 +1,6 @@
 import '../TakeOrder/TakeOrder.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Elements/Navbar/Navbar.js';
-import { useEffect } from 'react';
 
 export const TakeOrder=()=> {
 
@@ -38,19 +37,29 @@ export const TakeOrder=()=> {
 				method: 'POST',
 				headers: { "Content-Type": "application/json"},
 				body: JSON.stringify(order)
-			}) 
+			}).then(
+				alert("Orden enviada a cocina")
+			) 
 		}
+
+		/*const changeMenu = () => {
+			setMenu(menu.filter((x) => x.type === "desayuno"))
+		}
+
+		const changeBreakfast = () => {
+			setMenu(menu.filter((x) => x.type === "resto del dia"))
+		}*/
 
 	return(
 		<div className="TakeOrder-Main">
 			<Navbar/>
 			<div className="TakeOrder-Container">
 				<div className="TakeOrder-Menu" >
-					<button>Desayuno</button>
-					<button>Almuerzo y cena</button>
+					<button> Desayuno</button>
+					<button> Almuerzo y cena</button>
 					<hr/>
 					<div className="items">
-					{menu && menu.map((item) => (
+					{menu && menu.filter((x)=> x.type === "desayuno").map((item) => (
 						<div className="item-button" key={item.productId} onClick={()=>clicked(item)}>
 							<h1>{item.product}</h1>
 						</div>
