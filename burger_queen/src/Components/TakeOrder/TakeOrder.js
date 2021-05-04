@@ -10,9 +10,9 @@ export const TakeOrder=()=> {
 	const [clientName, setClientName] = useState('')
 
 
-		useEffect(() => {	
-		
-		fetch('http://localhost:8000/items')
+		useEffect(() => {
+
+		fetch('http://localhost:3000/items')
 		.then((res) =>res.json())
 		.then((data) => {setMenu(data)})
 		}, [])
@@ -34,11 +34,11 @@ export const TakeOrder=()=> {
 				"products" : orderItems
 			}
 
-			fetch('http://localhost:8000/orders', {
+			fetch('http://localhost:3000/orders', {
 				method: 'POST',
 				headers: { "Content-Type": "application/json"},
 				body: JSON.stringify(order)
-			}) 
+			})
 		}
 
 	return(
@@ -56,11 +56,11 @@ export const TakeOrder=()=> {
 						</div>
 					))
 					}
-					</div>	
+					</div>
 				</div>
 				<div className="Takeorder-Board-Container">
 					<div className="Takeorder-board">
-					<p>Orden</p>
+					<p id="ñ">Orden</p>
 					<input className="user-name" type="text" required placeholder="Nombre del cliente"
 					value={clientName} onChange={(e) => setClientName(e.target.value)}></input>
 					<div className="order">
@@ -70,7 +70,7 @@ export const TakeOrder=()=> {
 							</p>
 						))
 						}
-					</div>					
+					</div>
 					<p>Total: ${orderItems.reduce((a,b) => a + b.price * b.qty, 0)}</p>
 					<button onClick={sendOrder}>Enviar a cocina</button>
 					</div>
