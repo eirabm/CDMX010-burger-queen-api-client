@@ -124,6 +124,40 @@
         }
       ],
       "id": 2
+    },
+    {
+      "client": "Jose",
+      "products": [
+        {
+          "productId": "4",
+          "type": "desayuno",
+          "product": "Jugo de frutas natural",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "productId": "5",
+          "type": "resto del dia",
+          "product": "Hamburguesa simple",
+          "price": 10,
+          "qty": 1
+        },
+        {
+          "productId": "7",
+          "type": "acompañamientos",
+          "product": "Papas fritas",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "productId": "3",
+          "type": "desayuno",
+          "product": "Sandwich de jamón y queso",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "id": 3
     }
   ]
 }
