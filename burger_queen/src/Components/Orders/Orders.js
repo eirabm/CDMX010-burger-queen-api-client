@@ -1,7 +1,6 @@
 import '../../Components/Orders/Orders.css';
 import Navbar from '../Elements/Navbar/Navbar.js';
-import { useEffect } from 'react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const Orders = () => {
 
@@ -26,16 +25,19 @@ export const Orders = () => {
         <div className = "orders-container">
             { Orders.map((order) => (
                 <div className = "order-card" key={order.id}>
-								<div className="order-title">
-								<h1> Orden {order.id}</h1>
-                <h2>Cliente:{order.client}</h2>
-								</div>
-								<div className="order-products">
-									{order.products.map((item) => (
-
-                  	<p>{item.qty} {item.product}</p>
-                	))}
-								</div>
+				<div className="order-title">
+				<h1> Orden {order.id}</h1>
+                <p>00:00:00</p>
+				</div>
+				<div className="order-products">
+                <h3>Cliente: {order.client}</h3>
+				{order.products.map((item) => (
+               	<p>{item.qty} {item.product}</p>
+                ))}
+				</div>
+                <div className="orden-lista">
+                    <button>Enviar a Mesera</button>
+                </div>
 
                 </div>
             ))}

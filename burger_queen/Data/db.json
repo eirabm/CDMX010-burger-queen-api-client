@@ -2,13 +2,13 @@
   "auth": [
     {
       "id": "1",
-      "email": "eira@burgerqueen.com",
-      "password": "burguerEira"
+      "email": "eiram@burgerqueen.com",
+      "password": "eira"
     },
     {
       "id": "2",
-      "email": "wendy@burgerqueen.com",
-      "password": "burguerWendy"
+      "email": "osiris@burgerqueen.com",
+      "password": "osiris"
     }
   ],
   "items": [
@@ -50,27 +50,52 @@
     },
     {
       "productId": "7",
-      "type": "acompañamientos",
+      "type": "resto del dia",
       "product": "Papas fritas",
       "price": 5
     },
     {
       "productId": "8",
-      "type": "acompañamientos",
+      "type": "resto del dia",
       "product": "Aros de cebolla",
       "price": 5
     },
     {
       "productId": "9",
-      "type": "beber",
+      "type": "resto del dia",
       "product": "Agua 500ml",
       "price": 5
+    },
+    {
+      "productId": "10",
+      "type": "resto del dia",
+      "product": "Agua 750ml",
+      "price": 7
+    },
+    {
+      "productId": "11",
+      "type": "resto del dia",
+      "product": "Refresco 500ml",
+      "price": 7
+    },
+    {
+      "productId": "12",
+      "type": "resto del dia",
+      "product": "Refresco 750ml",
+      "price": 10
     }
   ],
   "orders": [
     {
-      "client": "Wendy",
+      "client": "Eira",
       "products": [
+        {
+          "productId": "2",
+          "type": "desayuno",
+          "product": "Café con leche",
+          "price": 7,
+          "qty": 1
+        },
         {
           "productId": "4",
           "type": "desayuno",
@@ -83,95 +108,20 @@
           "type": "desayuno",
           "product": "Sandwich de jamón y queso",
           "price": 10,
-          "qty": 2
-        },
-        {
-          "productId": "6",
-          "type": "resto del dia",
-          "product": "Hamburguesa doble",
-          "price": 10,
-          "qty": 2
+          "qty": 1
         },
         {
           "productId": "1",
           "type": "desayuno",
           "product": "Café americano",
           "price": 5,
-          "qty": 1
-        },
-        {
-          "productId": "5",
-          "type": "resto del dia",
-          "product": "Hamburguesa simple",
-          "price": 10,
           "qty": 1
         }
       ],
       "id": 1
     },
     {
-      "client": "Eira",
-      "products": [
-        {
-          "productId": "4",
-          "type": "desayuno",
-          "product": "Jugo de frutas natural",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "productId": "3",
-          "type": "desayuno",
-          "product": "Sandwich de jamón y queso",
-          "price": 10,
-          "qty": 1
-        },
-        {
-          "productId": "6",
-          "type": "resto del dia",
-          "product": "Hamburguesa doble",
-          "price": 10,
-          "qty": 3
-        }
-      ],
-      "id": 2
-    },
-    {
-      "client": "Jose",
-      "products": [
-        {
-          "productId": "4",
-          "type": "desayuno",
-          "product": "Jugo de frutas natural",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "productId": "5",
-          "type": "resto del dia",
-          "product": "Hamburguesa simple",
-          "price": 10,
-          "qty": 1
-        },
-        {
-          "productId": "7",
-          "type": "acompañamientos",
-          "product": "Papas fritas",
-          "price": 5,
-          "qty": 1
-        },
-        {
-          "productId": "3",
-          "type": "desayuno",
-          "product": "Sandwich de jamón y queso",
-          "price": 10,
-          "qty": 1
-        }
-      ],
-      "id": 3
-    },
-    {
-      "client": "Eira ",
+      "client": "Ale",
       "products": [
         {
           "productId": "1",
@@ -185,24 +135,24 @@
           "type": "desayuno",
           "product": "Sandwich de jamón y queso",
           "price": 10,
-          "qty": 1
+          "qty": 2
         },
         {
           "productId": "4",
           "type": "desayuno",
           "product": "Jugo de frutas natural",
           "price": 7,
-          "qty": 2
+          "qty": 3
         },
         {
-          "productId": "5",
-          "type": "resto del dia",
-          "product": "Hamburguesa simple",
-          "price": 10,
+          "productId": "2",
+          "type": "desayuno",
+          "product": "Café con leche",
+          "price": 7,
           "qty": 1
         }
       ],
-      "id": 4
+      "id": 2
     }
   ]
 }
