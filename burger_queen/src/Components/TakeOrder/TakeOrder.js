@@ -31,7 +31,9 @@ export const TakeOrder=()=> {
 		const sendOrder = () => {
 			const order = {
 				"client" : clientName,
-				"products" : orderItems
+				"products" : orderItems,
+				"status" : "pending",
+				"dateEntry" : new Date()
 			}
 
 			fetch('http://localhost:8000/orders', {

@@ -81,6 +81,11 @@ margin-left: 50px;
 	justify-content: center;
 	align-content: center;
 }
+
+.item-button:active {
+	background-color:#F3C51E !important;
+}
+
 .item-button h1{
 	margin: 0;
 	text-align: center;

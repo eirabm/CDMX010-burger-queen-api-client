@@ -10,7 +10,7 @@ export const OrderMenu = () =>{
 			<div className="menu-Option">
 			<button className="btn-newOrder"><Link to="/neworder">Nueva Orden</Link></button>
 			<button className="btn-Order"><Link to="/orders">Ordenes</Link></button>
-			<button className="btn-Admin">Administración</button>
+			<button className="btn-Admin"><Link to="/Admin">Administración</Link></button>
 			<button className="btn-Out"><Link to="/auth">Salir</Link></button>
 			</div>
 		</div>
