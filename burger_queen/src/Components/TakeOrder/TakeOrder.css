@@ -5,7 +5,7 @@
 }
 .Takeorder-Board-Container{
 	width: 50%;
-	min-height: 560px;
+	min-height: 460px;
 	margin: 20px;
 }
 
@@ -57,7 +57,9 @@
 .TakeOrder-Menu button{
 background-color: transparent;
 border: transparent;
-font-size: 1.5em;
+font-size: 1.2em;
+font-weight: bold;
+margin-left: 50px;
 }
 
 .items{
@@ -89,3 +91,4 @@ font-size: 1.5em;
 	padding: 20px;
 	height: 75%;
 }
+

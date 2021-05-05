@@ -1,18 +1,18 @@
 import '../TakeOrder/TakeOrder.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Elements/Navbar/Navbar.js';
-import { useEffect } from 'react';
 
 export const TakeOrder=()=> {
 
 	const [menu, setMenu] = useState(null)
 	const [orderItems, setOrderItems] = useState([]);
 	const [clientName, setClientName] = useState('')
+	const [actualMenu, setActualMenu] = useState('desayuno')
 
 
-		useEffect(() => {
-
-		fetch('http://localhost:3000/items')
+		useEffect(() => {	
+		
+		fetch('http://localhost:8000/items')
 		.then((res) =>res.json())
 		.then((data) => {setMenu(data)})
 		}, [])
@@ -34,33 +34,43 @@ export const TakeOrder=()=> {
 				"products" : orderItems
 			}
 
-			fetch('http://localhost:3000/orders', {
+			fetch('http://localhost:8000/orders', {
 				method: 'POST',
 				headers: { "Content-Type": "application/json"},
 				body: JSON.stringify(order)
-			})
+			}).then(
+				alert("Orden enviada a cocina")
+			) 
+		}
+
+		const changeMenu = () => {
+			setActualMenu('desayuno')
+		}
+
+		const changeBreakfast = () => {
+			setActualMenu('resto del dia')
 		}
 
 	return(
 		<div className="TakeOrder-Main">
 			<Navbar/>
 			<div className="TakeOrder-Container">
-				<div className="TakeOrder-Menu" >
-					<button>Desayuno</button>
-					<button>Almuerzo y cena</button>
+				<div className="TakeOrder-Menu">
+					<button onClick={changeMenu}> Desayuno</button>
+					<button onClick={changeBreakfast}> Almuerzo y cena</button>
 					<hr/>
 					<div className="items">
-					{menu && menu.map((item) => (
+					{menu && menu.filter((x) => x.type === actualMenu).map((item) => (
 						<div className="item-button" key={item.productId} onClick={()=>clicked(item)}>
 							<h1>{item.product}</h1>
 						</div>
 					))
 					}
-					</div>
+					</div>	
 				</div>
 				<div className="Takeorder-Board-Container">
 					<div className="Takeorder-board">
-					<p id="ñ">Orden</p>
+					<p>Orden</p>
 					<input className="user-name" type="text" required placeholder="Nombre del cliente"
 					value={clientName} onChange={(e) => setClientName(e.target.value)}></input>
 					<div className="order">
@@ -70,7 +80,7 @@ export const TakeOrder=()=> {
 							</p>
 						))
 						}
-					</div>
+					</div>					
 					<p>Total: ${orderItems.reduce((a,b) => a + b.price * b.qty, 0)}</p>
 					<button onClick={sendOrder}>Enviar a cocina</button>
 					</div>

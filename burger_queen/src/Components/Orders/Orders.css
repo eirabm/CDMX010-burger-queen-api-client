@@ -4,28 +4,34 @@
 }
 .order-card{
   box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
-	margin: 10px;
-	width: 30%;
+	margin: 30px;
   border-radius: 10px;
 	border: 3px solid #f3c51e;
+	width: 260px;
+}
+.order-card h3{
+	width: 100%;
+	text-align: left;
+	margin: 0%;
+	align-self: center;
 }
 .order-title {
 	display: flex;
 	flex-wrap: wrap;
 	background-color:#f3c51e ;
-	width: 100%;
 	text-align: center;
+	padding: 10px;
+	border: 5px solid #f3c51e;
 }
 .order-title h1{
 	width: 100%;
 	text-align: center;
 	margin: 0%;
 }
-.order-title h2{
-	width: 100%;
-	text-align: left;
+.order-title p{
 	margin: 0%;
 }
+
 .order-products{
 	text-align: left;
 	padding-left: 10px;
@@ -45,4 +51,22 @@ button:active{
   background-color:#F3C51E !important;
   border-color:#F3C51E!important;
   border:2px solid black!important;
+}
+.orden-lista{
+	display: flex;
+	width: 100%;
+	
+}
+.orden-lista button{
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5px;
+	width: 50%;	
+	padding: 10px;
+	color:#000000;
+	background-color:#F3C51E ;
+  border-color:#F3C51E;	
+	border-radius: 10px;
+	
 }
