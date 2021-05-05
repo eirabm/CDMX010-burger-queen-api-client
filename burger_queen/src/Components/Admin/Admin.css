@@ -1,0 +1,16 @@
+.admin-menu{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+  margin: 20px;
+}
+.admin-menu button{
+	background-color: transparent;
+	border: transparent;
+	font-size: 1.5em;
+}
+button:active{
+  background-color:#F3C51E !important;
+  border-color:#F3C51E!important;
+  border:2px solid black!important;
+}
