@@ -12,10 +12,10 @@ export const TakeOrder=()=> {
 
 		useEffect(() => {
 
-		fetch('http://localhost:3000/items')
+		fetch('http://localhost:8000/items')
 		.then((res) =>res.json())
-		.then((data) => {setMenu(data)})
-		}, [])
+		.then((data) => {setMenu(data);})
+		}, [] )
 
 		const clicked = (item) => {
 			const exists = orderItems.find((x) => x.productId === item.productId);
@@ -25,6 +25,7 @@ export const TakeOrder=()=> {
 					))
 			}else{
 				setOrderItems([...orderItems, { ...item, qty: 1 }]);
+				console.log(...orderItems);
 			}
 		}
 
@@ -34,7 +35,7 @@ export const TakeOrder=()=> {
 				"products" : orderItems
 			}
 
-			fetch('http://localhost:3000/orders', {
+			fetch('http://localhost:8000/orders', {
 				method: 'POST',
 				headers: { "Content-Type": "application/json"},
 				body: JSON.stringify(order)

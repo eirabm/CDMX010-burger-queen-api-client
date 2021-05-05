@@ -15,8 +15,8 @@ export const Login=()=>{
 			<div className="login-form">
 				<h1>Iniciar Sesión</h1>
 				<form>
-					<input className="user" type="text" placeholder="Usuario"></input><br/>
-					<input className="password" type="password" placeholder="Contraseña"></input><br/>
+					<input className="user" type="text" placeholder="Usuario" name="username"></input><br/>
+					<input className="password" type="password" placeholder="Contraseña" name="password"></input><br/>
 					<button><Link to="/">Ingresar</Link></button>
 				</form>
 

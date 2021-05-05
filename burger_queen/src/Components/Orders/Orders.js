@@ -9,7 +9,7 @@ export const Orders = () => {
 
     useEffect(() => {
 
-		fetch('http://localhost:3000/orders')
+		fetch('http://localhost:8000/orders')
 		.then((res) =>res.json())
 		.then((data) => {setOrders(data)})
 		}, [])
