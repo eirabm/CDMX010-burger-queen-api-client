@@ -7,6 +7,7 @@ export const TakeOrder=()=> {
 	const [menu, setMenu] = useState(null)
 	const [orderItems, setOrderItems] = useState([]);
 	const [clientName, setClientName] = useState('')
+	const [actualMenu, setActualMenu] = useState('desayuno')
 
 
 		useEffect(() => {	
@@ -42,24 +43,24 @@ export const TakeOrder=()=> {
 			) 
 		}
 
-		/*const changeMenu = () => {
-			setMenu(menu.filter((x) => x.type === "desayuno"))
+		const changeMenu = () => {
+			setActualMenu('desayuno')
 		}
 
 		const changeBreakfast = () => {
-			setMenu(menu.filter((x) => x.type === "resto del dia"))
-		}*/
+			setActualMenu('resto del dia')
+		}
 
 	return(
 		<div className="TakeOrder-Main">
 			<Navbar/>
 			<div className="TakeOrder-Container">
-				<div className="TakeOrder-Menu" >
-					<button> Desayuno</button>
-					<button> Almuerzo y cena</button>
+				<div className="TakeOrder-Menu">
+					<button onClick={changeMenu}> Desayuno</button>
+					<button onClick={changeBreakfast}> Almuerzo y cena</button>
 					<hr/>
 					<div className="items">
-					{menu && menu.filter((x)=> x.type === "desayuno").map((item) => (
+					{menu && menu.filter((x) => x.type === actualMenu).map((item) => (
 						<div className="item-button" key={item.productId} onClick={()=>clicked(item)}>
 							<h1>{item.product}</h1>
 						</div>

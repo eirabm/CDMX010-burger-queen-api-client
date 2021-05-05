@@ -87,75 +87,7 @@
   ],
   "orders": [
     {
-      "client": "Wendy",
-      "products": [
-        {
-          "productId": "4",
-          "type": "desayuno",
-          "product": "Jugo de frutas natural",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "productId": "3",
-          "type": "desayuno",
-          "product": "Sandwich de jamón y queso",
-          "price": 10,
-          "qty": 2
-        },
-        {
-          "productId": "6",
-          "type": "resto del dia",
-          "product": "Hamburguesa doble",
-          "price": 10,
-          "qty": 2
-        },
-        {
-          "productId": "1",
-          "type": "desayuno",
-          "product": "Café americano",
-          "price": 5,
-          "qty": 1
-        },
-        {
-          "productId": "5",
-          "type": "resto del dia",
-          "product": "Hamburguesa simple",
-          "price": 10,
-          "qty": 1
-        }
-      ],
-      "id": 1
-    },
-    {
       "client": "Eira",
-      "products": [
-        {
-          "productId": "4",
-          "type": "desayuno",
-          "product": "Jugo de frutas natural",
-          "price": 7,
-          "qty": 1
-        },
-        {
-          "productId": "3",
-          "type": "desayuno",
-          "product": "Sandwich de jamón y queso",
-          "price": 10,
-          "qty": 1
-        },
-        {
-          "productId": "6",
-          "type": "resto del dia",
-          "product": "Hamburguesa doble",
-          "price": 10,
-          "qty": 3
-        }
-      ],
-      "id": 2
-    },
-    {
-      "client": "Linnette",
       "products": [
         {
           "productId": "2",
@@ -172,28 +104,21 @@
           "qty": 1
         },
         {
-          "productId": "5",
-          "type": "resto del dia",
-          "product": "Hamburguesa simple",
-          "price": 10,
-          "qty": 2
-        },
-        {
-          "productId": "6",
-          "type": "resto del dia",
-          "product": "Hamburguesa doble",
+          "productId": "3",
+          "type": "desayuno",
+          "product": "Sandwich de jamón y queso",
           "price": 10,
           "qty": 1
         },
         {
-          "productId": "8",
-          "type": "acompañamientos",
-          "product": "Aros de cebolla",
+          "productId": "1",
+          "type": "desayuno",
+          "product": "Café americano",
           "price": 5,
           "qty": 1
         }
       ],
-      "id": 3
+      "id": 1
     },
     {
       "client": "Ale",
@@ -203,6 +128,20 @@
           "type": "desayuno",
           "product": "Café americano",
           "price": 5,
+          "qty": 1
+        },
+        {
+          "productId": "3",
+          "type": "desayuno",
+          "product": "Sandwich de jamón y queso",
+          "price": 10,
+          "qty": 2
+        },
+        {
+          "productId": "4",
+          "type": "desayuno",
+          "product": "Jugo de frutas natural",
+          "price": 7,
           "qty": 3
         },
         {
@@ -211,16 +150,9 @@
           "product": "Café con leche",
           "price": 7,
           "qty": 1
-        },
-        {
-          "productId": "4",
-          "type": "desayuno",
-          "product": "Jugo de frutas natural",
-          "price": 7,
-          "qty": 3
         }
       ],
-      "id": 4
+      "id": 2
     }
   ]
 }
