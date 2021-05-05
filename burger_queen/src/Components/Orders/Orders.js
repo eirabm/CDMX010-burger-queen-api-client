@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 export const Orders = () => {
 
     const [Orders, setOrders] = useState([])
+    const [orderStatus, setOrderStatus] = useState("pending")
 
     useEffect(() => {
 
@@ -13,21 +14,36 @@ export const Orders = () => {
 		.then((data) => {setOrders(data)})
 		}, [])
 
+    const orderReady = (order) => {
+
+        order.status = "delivering"
+
+        console.log(order)
+
+        fetch('http://localhost:8000/orders/' + order.id,{
+            method: 'PUT',
+		    headers: { "Content-Type": "application/json"},
+			body: JSON.stringify(order)
+        })
+        .then((res)=> console.log(res))
+
+    }
+
     return (
     <div>
         <Navbar/>
         <div className="orders-menu">
-            <button>Ordenes entrantes</button>
-            <button>Ordenes finalizadas</button>
-            <button>Ordenes cerrradas</button>
+            <button onClick={() => setOrderStatus('pending')}>Ordenes entrantes</button>
+            <button onClick={() => setOrderStatus('delivering')}>Ordenes listas para entrega</button>
+            <button onClick={() => setOrderStatus('closed')}>Ordenes cerrradas</button>
         </div>
 			<hr/>
         <div className = "orders-container">
-            { Orders.map((order) => (
+            { Orders.filter((x) => x.status === orderStatus).map((order) => (
                 <div className = "order-card" key={order.id}>
 				<div className="order-title">
 				<h1> Orden {order.id}</h1>
-                <p>00:00:00</p>
+                <p>{new Date().getHours() - new Date(order.dateEntry).getHours()}:{new Date().getMinutes() - new Date(order.dateEntry).getMinutes()}:{new Date().getSeconds() - new Date(order.dateEntry).getSeconds()}</p>
 				</div>
 				<div className="order-products">
                 <h3>Cliente: {order.client}</h3>
@@ -36,7 +52,7 @@ export const Orders = () => {
                 ))}
 				</div>
                 <div className="orden-lista">
-                    <button>Enviar a Mesera</button>
+                    <button onClick={()=> orderReady(order)}>Enviar a Mesera</button>
                 </div>
 
                 </div>

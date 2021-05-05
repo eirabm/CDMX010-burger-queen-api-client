@@ -2,6 +2,7 @@ import { Login } from './Components/Login/Login.js';
 import { OrderMenu } from './Components/OrderMenu/OrdersMenu.js';
 import { TakeOrder } from './Components/TakeOrder/TakeOrder.js';
 import { Orders } from './Components/Orders/Orders.js';
+import { Admin } from './Components/Admin/Admin.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path="/orders">
             <Orders />
+          </Route>
+          <Route>
+            <Admin />
           </Route>
         </Switch>
       </div>
