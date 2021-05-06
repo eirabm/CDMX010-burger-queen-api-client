@@ -1,5 +1,5 @@
 import '../TakeOrder/TakeOrder.css';
-import React, { useState, useEffect } from 'react';
+import  {React, useState, useEffect } from 'react';
 import Navbar from '../Elements/Navbar/Navbar.js';
 
 export const TakeOrder=()=> {
@@ -46,21 +46,13 @@ export const TakeOrder=()=> {
 			)
 		}
 
-		const changeMenu = () => {
-			setActualMenu('desayuno')
-		}
-
-		const changeBreakfast = () => {
-			setActualMenu('resto del dia')
-		}
-
 	return(
 		<div className="TakeOrder-Main">
 			<Navbar/>
 			<div className="TakeOrder-Container">
 				<div className="TakeOrder-Menu">
-					<button onClick={changeMenu}> Desayuno</button>
-					<button onClick={changeBreakfast}> Almuerzo y cena</button>
+					<button onClick={() => setActualMenu('desayuno')}> Desayuno</button>
+					<button onClick={() => setActualMenu('resto del dia')}> Almuerzo y cena</button>
 					<hr/>
 					<div className="items">
 					{menu && menu.filter((x) => x.type === actualMenu).map((item) => (

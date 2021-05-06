@@ -2,11 +2,19 @@
   "auth": [
     {
       "number": "567890",
-      "name": "Eira",
+      "name": "Eira Mazón",
       "email": "eira@burgerqueen.com",
       "password": "qwertyu",
       "position": "mesera",
       "id": 1
+    },
+    {
+      "number": "0253",
+      "name": "Wendy Osiris",
+      "email": "wendy@burgerqueen.com",
+      "password": "wendycontr",
+      "position": "Mesera",
+      "id": 2
     }
   ],
   "items": [
