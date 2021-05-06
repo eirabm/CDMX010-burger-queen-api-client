@@ -2,7 +2,7 @@ import './../../Elements/Navbar/Navbar.css';
 import React from 'react';
 import { Link } from 'react-router-dom'
 import logoNavbar from './../../../Assets/Images/logoNavbar.png';
-import menuGral from './../../../Assets/Icon/menuGral.png'
+import menuGral from './../../../Assets/Icon/home.svg'
 
  export default function Navbar(){
 	return(

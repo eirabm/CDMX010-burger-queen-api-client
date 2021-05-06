@@ -10,12 +10,12 @@ export const TakeOrder=()=> {
 	const [actualMenu, setActualMenu] = useState('desayuno')
 
 
-		useEffect(() => {	
-		
+		useEffect(() => {
+
 		fetch('http://localhost:8000/items')
 		.then((res) =>res.json())
-		.then((data) => {setMenu(data)})
-		}, [])
+		.then((data) => {setMenu(data);})
+		}, [] )
 
 		const clicked = (item) => {
 			const exists = orderItems.find((x) => x.productId === item.productId);
@@ -25,6 +25,7 @@ export const TakeOrder=()=> {
 					))
 			}else{
 				setOrderItems([...orderItems, { ...item, qty: 1 }]);
+				console.log(...orderItems);
 			}
 		}
 
@@ -42,7 +43,7 @@ export const TakeOrder=()=> {
 				body: JSON.stringify(order)
 			}).then(
 				alert("Orden enviada a cocina")
-			) 
+			)
 		}
 
 		const changeMenu = () => {
@@ -68,7 +69,7 @@ export const TakeOrder=()=> {
 						</div>
 					))
 					}
-					</div>	
+					</div>
 				</div>
 				<div className="Takeorder-Board-Container">
 					<div className="Takeorder-board">
@@ -82,7 +83,7 @@ export const TakeOrder=()=> {
 							</p>
 						))
 						}
-					</div>					
+					</div>
 					<p>Total: ${orderItems.reduce((a,b) => a + b.price * b.qty, 0)}</p>
 					<button onClick={sendOrder}>Enviar a cocina</button>
 					</div>
