@@ -1,25 +1,47 @@
 import './../RegisEmployee/RegisEmployee.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function RegisEmployee() {
+
+	const[datos, setDatos]=useState({
+		number:'',
+		name:'',
+		email:'',
+		password:'',
+		position:''
+	})
+	const handleInputChange = (event)=>{
+		setDatos({
+			...datos,
+			[event.target.name]:event.target.value
+		})
+	}
+	const sendData =(event)=>{
+		event.preventDefault();
+		console.log(datos);
+		fetch('http://localhost:8000/auth', {
+				method: 'POST',
+				headers: { "Content-Type": "application/json"},
+				body: JSON.stringify(datos)
+			}).then(
+				alert("Registro exitoso")
+			)
+
+	}
+
+
 	return(
 		<div className="container-registration">
-			<h1>Registro de usuarios</h1>
-			<form className="form-registration">
-				<input type="text" name="name" placeholder="Nombre completo del empleado"/>
-				<input type="email" name="email" placeholder="Correo electronico" />
-				<input type="password" name="password" placeholder="Contraseña" />
-				<label>
-					Puesto
-				<select>
-					<option value="admin">Administrativo</option>					
-					<option value="chef">Cocinero</option>
-					<option value="waitress">Mesera/Mesero</option>
-				</select>
-				</label>
-				<input type="submit" value="Registrar"/>
+			<h1 id="title">Ingrese datos del empleado</h1>
+			<form className="form-registration" onSubmit={sendData}>
+				<input className="number-emp" type="number" name="number" placeholder="Numero de empleado" onChange={handleInputChange} />
+				<input className="username-reg" type="text" name="name" placeholder="Nombre completo del empleado" onChange={handleInputChange} />
+				<input className="email-reg" type="email" name="email" placeholder="Correo electronico" onChange={handleInputChange} />
+				<input className="password" type="password" name="password" placeholder="Contraseña" onChange={handleInputChange} />
+				<input className="position" type="text" name="position" placeholder="Cargo" onChange={handleInputChange} />
+				<input id="send" type="submit" value="Registrar"/>
 			</form>
 		</div>
 	)
-	
+
 }

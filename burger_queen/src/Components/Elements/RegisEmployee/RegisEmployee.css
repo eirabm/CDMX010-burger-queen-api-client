@@ -1,7 +1,78 @@
 .form-registration {
-	width: 50%;
+	width: 40%;
+	height: 40vh;
 	display: flex;
  	flex-direction: column;
-	margin: auto;
-	
+	margin-left:  auto;
+	margin-right: auto;
+	margin-top: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: rgb(189, 192, 192,0.5);
+	border-radius: 10px;
+
+}
+hr{
+	border-top: 3px solid #f3c51e;
+}
+ #title{
+	text-align: center;
+	color: rgb(7, 7, 7);
+	margin-top: 30px;
+}
+.form-registration input{
+margin:auto;
+width: 70%;
+height: 35px;
+font-size: 1em;
+border-radius: 10px;
+justify-content: center;
+align-content: center;
+padding-left: 20px;
+background-repeat: no-repeat;
+background-position: 4px center;
+background-size: 13px;
+border-color: rgb(217, 223, 223);
+}
+.username-reg{
+background-image: url(./../../../Assets/Icon/user.svg);
+}
+.password{
+background-image: url(./../../../Assets/Icon/password.svg);
+}
+.email-reg{
+background-image: url(./../../../Assets/Icon/email.svg);
+}
+.position{
+background-image: url(./../../../Assets/Icon/cargo.svg);
+}
+.number-emp{
+background-image: url(./../../../Assets/Icon/ident.svg);
+}
+select{
+margin-left:  auto;
+margin-right: auto;
+width: 50%;
+height: 30px;
+border-radius: 10px;
+justify-content: center;
+align-content: center;
+padding-left: 15px;
+border-color: rgb(217, 223, 223);
+}
+.form-registration label{
+margin-left: 12%;
+margin-top:8px ;
+margin-bottom: 8px;
+
+}
+#send{
+margin:auto;
+width: 40%;
+height: 30px;
+border-radius: 10px;
+justify-content: center;
+align-content: center;
+background-color:#f3c51e ;
+font-size: 1em;
 }
