@@ -1,0 +1,24 @@
+.container-cards{
+	display: flex;
+	flex-wrap: wrap;
+}
+.card-inventario{
+    display: flex;
+		flex-direction: column;
+		width: 20%;
+		height: 25vh;
+    box-shadow: 0 3px 10px rgba(100, 100, 100, 0.5);
+		margin: 15px;
+		padding: 5px;
+		border-radius: 20px;
+		border: 3px solid #f3c51e;
+    font-size: 1.3rem;
+}
+.img-product{
+	width: 50%;
+	height: 50%;
+	margin:auto;
+}
+.card-inventario p {
+	margin: auto;
+}
