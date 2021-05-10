@@ -14,3 +14,9 @@
 .employee-card p {
     padding-left: 20px;
 }
+
+.employee-card img {
+	width: 30px;
+	height: 100%;
+	padding: 15px;
+}

@@ -18,8 +18,6 @@ export const Orders = () => {
 
         order.status = "delivering"
 
-        console.log(order)
-
         fetch('http://localhost:8000/orders/' + order.id,{
             method: 'PUT',
 		    headers: { "Content-Type": "application/json"},
@@ -39,9 +37,9 @@ export const Orders = () => {
         </div>
 			<hr/>
         <div className = "orders-container">
-            { Orders.filter((x) => x.status === orderStatus).map((order) => (
-                <div className = "order-card" key={order.id}>
-				<div className="order-title">
+            {Orders&&Orders.filter((x) => x.status === orderStatus).map((order) => (
+                <div className = "order-card" style={order.status === 'delivering' ? {border: "3px solid #3B9611"} : {border: "3px solid #f3c51e"}} key={order.id}>
+                    <div className="order-title" style={order.status === 'delivering' ? { border: "3px solid #3B9611", backgroundColor: "#3B9611"} : {border: "3px solid #f3c51e", backgroundColor: "#f3c51e"}}>
 				<h1> Orden {order.id}</h1>
                 <p>{new Date().getHours() - new Date(order.dateEntry).getHours()}:{new Date().getMinutes() - new Date(order.dateEntry).getMinutes()}:{new Date().getSeconds() - new Date(order.dateEntry).getSeconds()}</p>
 				</div>
@@ -52,7 +50,8 @@ export const Orders = () => {
                 ))}
 				</div>
                 <div className="orden-lista">
-                    <button onClick={()=> orderReady(order)}>Enviar a Mesera</button>
+                        {order.status === 'delivering' ? <button onClick={() => orderReady(order)}>Orden entregada</button> : <button onClick={() => orderReady(order)}>Enviar a Mesera</button>}
+                    
                 </div>
 
                 </div>
