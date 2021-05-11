@@ -1,10 +1,10 @@
 {
   "auth": [
     {
-      "number": "567890",
-      "name": "Eira Mazón",
-      "email": "eira@burgerqueen.com",
-      "password": "qwertyu",
+      "number": "14110098",
+      "name": "Maria Delgado Cruz",
+      "email": "maria@burgerqueen.com",
+      "password": "qwerty",
       "position": "mesera",
       "id": 1
     }
@@ -243,6 +243,56 @@
       "status": "pending",
       "dateEntry": "2021-05-10T18:15:48.877Z",
       "id": 6
+    },
+    {
+      "client": "Lesly",
+      "products": [
+        {
+          "productId": "4",
+          "type": "desayuno",
+          "product": "Jugo de frutas natural",
+          "price": 7,
+          "qty": 2
+        },
+        {
+          "productId": "3",
+          "type": "desayuno",
+          "product": "Sandwich de jamón y queso",
+          "price": 10,
+          "qty": 2
+        },
+        {
+          "productId": "6",
+          "type": "resto del dia",
+          "product": "Hamburguesa doble",
+          "price": 10,
+          "qty": 1
+        },
+        {
+          "productId": "8",
+          "type": "resto del dia",
+          "product": "Aros de cebolla",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "productId": "7",
+          "type": "resto del dia",
+          "product": "Papas fritas",
+          "price": 5,
+          "qty": 2
+        },
+        {
+          "productId": "9",
+          "type": "resto del dia",
+          "product": "Agua 500ml",
+          "price": 5,
+          "qty": 2
+        }
+      ],
+      "status": "delivering",
+      "dateEntry": "2021-05-11T02:31:12.052Z",
+      "id": 7
     }
   ],
   "inventary": [
@@ -293,12 +343,6 @@
       "nameProduct": "Catsup",
       "existenceProduct": 23,
       "imgProduct": "https://comercialdealimentos.com.mx/wp-content/uploads/2020/05/DSC_0939-removebg-preview.png"
-    },
-    {
-      "id": 9,
-      "nameProduct": "Refresco 500ml",
-      "existenceProduct": 20,
-      "imgProduct": "https://d29nyx213so7hn.cloudfront.net/media/catalog/product/cache/608f8f0479d99bdd204baef4cefe972f/p/a/pack-joya-fresca-fanta-sprite-600ml_2.png"
     },
     {
       "id": 10,
