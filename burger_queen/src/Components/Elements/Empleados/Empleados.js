@@ -18,11 +18,10 @@ export default  function Empleados(){
         fetch('http://localhost:8000/auth/' + employee.id, {
             method: 'DELETE'
         })
-        .then(console.log('borrado'))
 
     }
 
-    return ( 
+    return (
         <div className="container-registration">
         <h1 id="title">Empleados</h1>
 
@@ -31,7 +30,7 @@ export default  function Empleados(){
                 <div key={x.id} className="employee-card">
                     <p>{x.name}</p>
                     <p>{x.email}</p>
-                    <p>{x.number}</p> 
+                    <p>{x.number}</p>
                     <p>{x.position}</p>
                     <img src={edit} alt="edit"/>
                     <img src={trash} onClick={()=>deleteEmployee(x)} alt="trash"/>
@@ -43,4 +42,3 @@ export default  function Empleados(){
         </div>
      );
 }
-  
